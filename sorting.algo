@@ -1,0 +1,18 @@
+ALGORITHM Sorting_insert
+VAR
+    set  : ARRAY_OF integer[20];
+    i, j, aux, n : integer;
+BEGIN
+    n:=set.lenght
+
+    FOR i FROM 1 TO n-1 step1  DO
+        aux:=set[i];
+        j:=i-1;
+        WHILE (j>=0 && set[j]>aux) DO
+            set[j+1]:=set[j];
+            j:=j-1;
+        END_WHILE
+        set[j+1]:=aux;
+    END_FOR
+   
+END
